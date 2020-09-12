@@ -13,14 +13,6 @@ RUN unzip -q ghidra.zip && mv ghidra_9.0 /ghidra && rm ghidra.zip
 WORKDIR /repos
 WORKDIR /ghidra
 
-# Create unprivileged ghidra user and give it full access to contents of /ghidra and /repos
-RUN groupadd -r ghidra && useradd --no-log-init -r -g ghidra -d /ghidra -s /bin/bash ghidra && \
-	chown -R ghidra:ghidra /ghidra && \
-	chown root:ghidra /ghidra && \
-	chmod g+w /ghidra && \
-	chown root:ghidra /repos && \
-	chmod g+w /repos
-
 # Set the repositories dir to /repos, the account name to ghidra, and add
 # the -u parameter, which means users are prompted for their usernames.
 RUN sed -i \
