@@ -20,21 +20,12 @@ RUN sed -i \
 	-e 's/^wrapper\.app\.parameter\.2=/wrapper.app.parameter.4=/g' \
 	-e 's/^wrapper\.app\.parameter\.1=-a0$/wrapper.app.parameter.2=-a0/g' \
 	server/server.conf && \
-	echo 'wrapper.app.account=ghidra' >> server/server.conf && \
+	echo 'wrapper.app.account=root' >> server/server.conf && \
 	echo 'wrapper.app.parameter.3=-u' >> server/server.conf && \
 	echo 'wrapper.app.parameter.1=-ip0.0.0.0' >> server/server.conf
 	# -e 's/^wrapper\.console\.loglevel=INFO$/wrapper.console.loglevel=DEBUG/g' \
 	# -e 's/^#wrapper\.debug=.*$/wrapper.debug=true/g' \
 	# -e 's/^wrapper\.logfile\.loglevel=.*$/wrapper.logfile.loglevel=DEBUG/g' \
-
-# Switch to unprivileged ghidra user for running the Ghidra server
-USER ghidra
-
-# Allow option of mounting /repos as a volume so that the repos can live outside of the container
-VOLUME /repos
-
-# These ports are exposed by Ghidra server
-EXPOSE 13100 13101 13102
 
 # Actually start Ghidra server
 CMD ["/ghidra/server/ghidraSvr", "console"]
