@@ -7,5 +7,5 @@ The NSA software reverse engineering tool, Ghidra, uses a server component for c
 
 1. Run build.sh
 2. Run deploy.sh
-3. Run addUsers.py
+3. Run `addUsers.py UserName` where UserName is your new user to add.
 4. Default pw for new user is "changeme"
