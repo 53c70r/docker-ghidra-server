@@ -5,7 +5,6 @@ The NSA software reverse engineering tool, Ghidra, uses a server component for c
 
 ## Quickstart
 
-1. Run build.sh
-2. Run deploy.sh
-3. Run `addUsers.py UserName` where UserName is your new user to add.
-4. Default pw for new user is "changeme"
+1. make - build the container
+2. make install - deploy podman container and run it
+3. make adduser user=admin. - Add user "admin" / default pw for new user is "changeme"
