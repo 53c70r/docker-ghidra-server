@@ -27,5 +27,7 @@ RUN sed -i \
 	# -e 's/^#wrapper\.debug=.*$/wrapper.debug=true/g' \
 	# -e 's/^wrapper\.logfile\.loglevel=.*$/wrapper.logfile.loglevel=DEBUG/g' \
 
+VOLUME /repos
+
 # Actually start Ghidra server
 CMD ["/ghidra/server/ghidraSvr", "console"]
