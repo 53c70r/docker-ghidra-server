@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Remove (and stop if running) the docker container
 podman rm -f ghidra-server 2>/dev/null
