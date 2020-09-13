@@ -13,7 +13,7 @@ RUN unzip -q ghidra.zip && mv ghidra_9.1.2_PUBLIC /ghidra && rm ghidra.zip
 WORKDIR /repos
 WORKDIR /ghidra
 
-# Set the repositories dir to /repos, the account name to ghidra, and add
+# Set the repositories dir to /repos, the account name to root, and add
 # the -u parameter, which means users are prompted for their usernames.
 RUN sed -i \
 	-e 's/^ghidra\.repositories\.dir=.*$/ghidra.repositories.dir=\/repos/g' \
