@@ -8,3 +8,4 @@ The NSA software reverse engineering tool, Ghidra, uses a server component for c
 1. make - build the container
 2. make install - deploy podman container and run it
 3. make adduser user=admin - Add user "admin" / default pw for new user is "changeme"
+4. you can now e.g. use "systemctl --user status container-ghidra-server.service"
