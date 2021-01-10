@@ -5,6 +5,7 @@ The NSA software reverse engineering tool, Ghidra, uses a server component for c
 
 ## Quickstart
 
+0. change "wrapper.app.parameter.1" in Dockerfile to your hostname
 1. make - build the container
 2. make install - deploy podman container and run it
 3. make adduser user=admin - Add user "admin" / default pw for new user is "changeme"
