@@ -1,7 +1,7 @@
 FROM openjdk:11-jdk
 
 # Install necessary packages: wget, unzip, and ed (used by ghidraSvr script)
-RUN apt-get update && apt-get install -y wget unzip ed && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt upgrade -y && apt install -y wget unzip ed && rm -rf /var/lib/apt/lists/*
 
 # Download Ghidra, verify checksum, extract to /ghidra, delete zip
 WORKDIR /tmp
