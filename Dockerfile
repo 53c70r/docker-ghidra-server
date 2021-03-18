@@ -5,9 +5,9 @@ RUN apt update && apt upgrade -y && apt install -y wget unzip ed && rm -rf /var/
 
 # Download Ghidra, verify checksum, extract to /ghidra, delete zip
 WORKDIR /tmp
-RUN wget -q https://ghidra-sre.org/ghidra_9.2.1_PUBLIC_20201215.zip -O ghidra.zip && \
-	echo 'cfaeb2b5938dec90388e936f63600ad345d41b509ffed4727142ba9ed44cb5e8 ghidra.zip' | sha256sum -c
-RUN unzip -q ghidra.zip && mv ghidra_9.2.1_PUBLIC /ghidra && rm ghidra.zip
+RUN wget -q https://ghidra-sre.org/ghidra_9.2.2_PUBLIC_20201229.zip -O ghidra.zip && \
+	echo '8cf8806dd5b8b7c7826f04fad8b86fc7e07ea380eae497f3035f8c974de72cf8 ghidra.zip' | sha256sum -c
+RUN unzip -q ghidra.zip && mv ghidra_9.2.2_PUBLIC /ghidra && rm ghidra.zip
 
 # Setup directory structure
 WORKDIR /repos
