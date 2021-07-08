@@ -7,7 +7,7 @@ RUN apt update && apt upgrade -y && apt install -y wget unzip ed && rm -rf /var/
 WORKDIR /tmp
 RUN wget -q https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.0_build/ghidra_10.0_PUBLIC_20210621.zip -O ghidra.zip && \
 	echo 'aaf84d14fb059beda10de9056e013186601962b6f87cd31161aaac57698a0f11 ghidra.zip' | sha256sum -c
-RUN unzip -q ghidra.zip && mv ghidra_9.2.2_PUBLIC /ghidra && rm ghidra.zip
+RUN unzip -q ghidra.zip && mv ghidra_10.0_PUBLIC /ghidra && rm ghidra.zip
 
 # Setup directory structure
 WORKDIR /repos
